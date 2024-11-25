@@ -1,0 +1,58 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore test and log files
+*.log
+*.out
+*.err
+
+# Ignore dataset files (if you don't need them in the Docker container)
+data/
+*.csv
+*.tsv
+*.json
+*.xlsx
+
+# Ignore temporary and backup files
+*.bak
+*.swp
+*.swo
+*.tmp
+*.~*
+
+# Ignore Dockerfile-related temporary build artifacts
+.docker/
+docker-compose.override.yml
+docker-compose.yml
+
+# Ignore Git-related files
+.git/
+.gitignore
+
+# Ignore package manager files if not needed
+node_modules/
+*.yarn
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Python-specific files
+notebook.ipynb
+test_url.py
+Dockerfile
