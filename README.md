@@ -65,3 +65,9 @@ docker build -t user-classifer .
 ```
 docker run -it --rm -p 9696:9696 user-classifier
 ```
+
+3. Test the flask app running this command:
+
+```
+python test_url.py
+```
