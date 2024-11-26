@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 from predict import predict
-import waitress
 
 app = Flask(__name__)
 

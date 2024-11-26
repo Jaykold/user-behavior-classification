@@ -71,3 +71,9 @@ docker run -it --rm -p 9696:9696 user-classifier
 ```
 python test_url.py
 ```
+
+4. Push to DockerHub (Optional)
+
+```
+docker tag user-classifier <dockerhubName/user-classifier:latest>
+```
