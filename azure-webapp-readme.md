@@ -2,9 +2,7 @@
 
 1. Install Azure CLI
 
-```
-[Use this link to install it for your preferred operating system](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-```
+Use this [link](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) to install it for your preferred operating system
 
 2. Login to Azure CLI
 
