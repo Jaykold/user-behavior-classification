@@ -16,11 +16,8 @@ user_data = {
 }
 
 try:
-    response = requests.post(url, json=user_data, timeout=5)
-    ic(f"Status Code: {response.status_code}")
-    
-    response.raise_for_status()
-    ic(response.json())
+    response = requests.post(url, json=user_data, timeout=5).json()
+    ic(response)
 except requests.exceptions.RequestException as e:
     ic(f"Request Error: {e}")
 except Exception as e:

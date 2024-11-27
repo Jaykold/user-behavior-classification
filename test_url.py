@@ -15,5 +15,10 @@ user_data = {
     "gender": "Male",
 }
 
-response = requests.post(url, json=user_data, timeout=5).json()
-ic(response)
+try:
+    response = requests.post(url, json=user_data, timeout=5).json()
+    ic(response)
+except requests.exceptions.RequestException as e:
+    ic(f"Request Error: {e}")
+except Exception as e:
+    ic(f"Unexpected Error: {e}")

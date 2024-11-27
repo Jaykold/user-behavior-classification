@@ -38,10 +38,30 @@ cd user-behavior-classification
 
 ### Create a virtual environment
 
+```
+python -m venv myenv
+```
+
+After creating the virtual environment, you need to activate it:
+
+- On Windows:
+
+```
+myenv\Scripts\activate
+```
+
+- On macOS and Linux:
+
+```
+source myenv/bin/activate
+```
+
 You can install the project dependencies by running this command:
 
 ```
+
 pip install -r requirements.txt
+
 ```
 
 ### Running the Application
@@ -49,7 +69,9 @@ pip install -r requirements.txt
 To run the application, execute the following command:
 
 ```
-waitress-serve --listen=0.0.0.0:9696 user_classifier:app
+
+waitress-serve --listen=0.0.0.0:9696 main:app
+
 ```
 
 ### Building & Running the Docker container
@@ -57,19 +79,25 @@ waitress-serve --listen=0.0.0.0:9696 user_classifier:app
 1. Build the docker image using this code
 
 ```
+
 docker build -t user-classifer .
+
 ```
 
 2. Run the container
 
 ```
+
 docker run -it --rm -p 9696:9696 user-classifier
+
 ```
 
 3. Test the flask app running this command:
 
 ```
+
 python test_url.py
+
 ```
 
 4. Push to DockerHub (Optional)

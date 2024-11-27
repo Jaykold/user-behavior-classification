@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 9696
 
-ENTRYPOINT ["waitress-serve", "--host=0.0.0.0", "--port=9696", "user_classifier:app"]
+ENTRYPOINT ["waitress-serve", "--host=0.0.0.0", "--port=9696", "main:app"]
