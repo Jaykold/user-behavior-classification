@@ -1,7 +1,7 @@
 import requests
 from icecream import ic
 
-url = "http://userclassifier.azurewebsites.net/predict"
+url = "https://userclassifier.azurewebsites.net/predict"
 
 user_data = {
     "device": "Google Pixel 5",
@@ -14,6 +14,14 @@ user_data = {
     "age": 20,
     "gender": "Female",
 }
-response = requests.post(url, json=user_data, timeout=5)#.json()
-response.raise_for_status()
-#ic(response.json())
+
+try:
+    response = requests.post(url, json=user_data, timeout=5)
+    ic(f"Status Code: {response.status_code}")
+    
+    response.raise_for_status()
+    ic(response.json())
+except requests.exceptions.RequestException as e:
+    ic(f"Request Error: {e}")
+except Exception as e:
+    ic(f"Unexpected Error: {e}")
