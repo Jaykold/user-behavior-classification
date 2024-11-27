@@ -59,9 +59,7 @@ source myenv/bin/activate
 You can install the project dependencies by running this command:
 
 ```
-
 pip install -r requirements.txt
-
 ```
 
 ### Running the Application
@@ -69,9 +67,7 @@ pip install -r requirements.txt
 To run the application, execute the following command:
 
 ```
-
 waitress-serve --listen=0.0.0.0:9696 main:app
-
 ```
 
 ### Building & Running the Docker container
@@ -79,25 +75,19 @@ waitress-serve --listen=0.0.0.0:9696 main:app
 1. Build the docker image using this code
 
 ```
-
 docker build -t user-classifer .
-
 ```
 
 2. Run the container
 
 ```
-
 docker run -it --rm -p 9696:9696 user-classifier
-
 ```
 
-3. Test the flask app running this command:
+3. Test the running container with this command:
 
 ```
-
 python test_url.py
-
 ```
 
 4. Push to DockerHub (Optional)
